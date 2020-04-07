@@ -1,0 +1,77 @@
+2020-03-26 07:19:34.7076 DEBUG Start
+2020-03-26 07:19:36.8680 INFO Entity Framework Core 2.1.14-servicing-32113 initialized 'MoviesDBcontext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 07:19:37.0349 INFO Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2020-03-26 07:19:37.0349 INFO Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2020-03-26 07:19:37.0462 INFO Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2020-03-26 07:19:37.0462 INFO No migrations were applied. The database is already up to date.
+2020-03-26 07:19:37.1005 INFO User profile is available. Using 'C:\Users\e234542\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-26 07:19:37.6024 INFO Request starting HTTP/1.1 GET http://localhost:50350/api/values  
+2020-03-26 07:19:37.7677 INFO Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller Movies.API.Controllers.ValuesController (Movies.API).
+2020-03-26 07:19:37.7798 INFO Executing action method Movies.API.Controllers.ValuesController.Get (Movies.API) - Validation state: Valid
+2020-03-26 07:19:37.7798 INFO Executed action method Movies.API.Controllers.ValuesController.Get (Movies.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.3406ms.
+2020-03-26 07:19:37.7986 INFO Executing ObjectResult, writing value of type 'System.String[]'.
+2020-03-26 07:19:37.8540 INFO Executed action Movies.API.Controllers.ValuesController.Get (Movies.API) in 82.2953ms
+2020-03-26 07:19:37.8625 INFO Request finished in 260.4682ms 200 application/json; charset=utf-8
+2020-03-26 07:20:02.3970 INFO Request starting HTTP/1.1 GET http://localhost:50350/api/movies  
+2020-03-26 07:20:02.3970 INFO Route matched with {action = "GetMovies", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movies.API.Models.Movie]] GetMovies() on controller Movies.API.Controllers.MoviesController (Movies.API).
+2020-03-26 07:20:02.7518 INFO Executing action method Movies.API.Controllers.MoviesController.GetMovies (Movies.API) - Validation state: Valid
+2020-03-26 07:20:02.7518 DEBUG Hey my first log
+2020-03-26 07:20:02.7518 INFO Entity Framework Core 2.1.14-servicing-32113 initialized 'MoviesDBcontext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 07:20:02.9272 INFO Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[ID], [m].[Description], [m].[DirectorId], [m].[Genre], [m].[ReleaseDate], [m].[Title], [m.Director].[ID], [m.Director].[FirstName], [m.Director].[LastName]
+FROM [Movie] AS [m]
+INNER JOIN [Director] AS [m.Director] ON [m].[DirectorId] = [m.Director].[ID]
+2020-03-26 07:20:03.0330 INFO Executed action method Movies.API.Controllers.MoviesController.GetMovies (Movies.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 279.7811ms.
+2020-03-26 07:20:03.0330 INFO Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movies.API.Models.Movie, Movies.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 07:20:03.0487 INFO Executed action Movies.API.Controllers.MoviesController.GetMovies (Movies.API) in 645.4173ms
+2020-03-26 07:20:03.0487 INFO Request finished in 653.0553ms 200 application/json; charset=utf-8
+2020-03-26 07:20:58.8004 INFO Request starting HTTP/1.1 GET http://localhost:50350/api/movies  
+2020-03-26 07:20:58.8004 INFO Route matched with {action = "GetMovies", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movies.API.Models.Movie]] GetMovies() on controller Movies.API.Controllers.MoviesController (Movies.API).
+2020-03-26 07:20:58.8004 INFO Executing action method Movies.API.Controllers.MoviesController.GetMovies (Movies.API) - Validation state: Valid
+2020-03-26 07:20:58.8004 DEBUG Hey my first log
+2020-03-26 07:20:58.8004 INFO Entity Framework Core 2.1.14-servicing-32113 initialized 'MoviesDBcontext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 07:20:58.8126 INFO Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[ID], [m].[Description], [m].[DirectorId], [m].[Genre], [m].[ReleaseDate], [m].[Title], [m.Director].[ID], [m.Director].[FirstName], [m.Director].[LastName]
+FROM [Movie] AS [m]
+INNER JOIN [Director] AS [m.Director] ON [m].[DirectorId] = [m.Director].[ID]
+2020-03-26 07:20:58.8126 INFO Executed action method Movies.API.Controllers.MoviesController.GetMovies (Movies.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9.7453ms.
+2020-03-26 07:20:58.8126 INFO Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movies.API.Models.Movie, Movies.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 07:20:58.8126 INFO Executed action Movies.API.Controllers.MoviesController.GetMovies (Movies.API) in 11.8931ms
+2020-03-26 07:20:58.8126 INFO Request finished in 15.6167ms 200 application/json; charset=utf-8
+2020-03-26 07:47:20.3806 DEBUG Start
+2020-03-26 07:47:22.3293 INFO Entity Framework Core 2.1.14-servicing-32113 initialized 'MoviesDBcontext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 07:47:22.5736 INFO Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2020-03-26 07:47:22.5863 INFO Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2020-03-26 07:47:22.6037 INFO Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2020-03-26 07:47:22.6217 INFO No migrations were applied. The database is already up to date.
+2020-03-26 07:47:22.6577 INFO User profile is available. Using 'C:\Users\e234542\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-26 07:47:23.2810 INFO Request starting HTTP/1.1 GET http://localhost:50350/api/values  
+2020-03-26 07:47:23.5288 INFO Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller Movies.API.Controllers.ValuesController (Movies.API).
+2020-03-26 07:47:23.5460 INFO Executing action method Movies.API.Controllers.ValuesController.Get (Movies.API) - Validation state: Valid
+2020-03-26 07:47:23.5460 INFO Executed action method Movies.API.Controllers.ValuesController.Get (Movies.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.2852ms.
+2020-03-26 07:47:23.5661 INFO Executing ObjectResult, writing value of type 'System.String[]'.
+2020-03-26 07:47:23.6272 INFO Executed action Movies.API.Controllers.ValuesController.Get (Movies.API) in 90.1163ms
+2020-03-26 07:47:23.6404 INFO Request finished in 360.0487ms 200 application/json; charset=utf-8
+2020-03-26 07:47:37.3304 INFO Request starting HTTP/1.1 GET http://localhost:50350/index.html  
+2020-03-26 07:47:37.4753 INFO Request finished in 144.9941ms 200 text/html;charset=utf-8
+2020-03-26 07:47:37.5133 INFO Request starting HTTP/1.1 GET http://localhost:50350/swagger-ui.css  
+2020-03-26 07:47:37.5133 INFO Request starting HTTP/1.1 GET http://localhost:50350/swagger-ui-bundle.js  
+2020-03-26 07:47:37.5133 INFO The file /swagger-ui.css was not modified
+2020-03-26 07:47:37.5133 INFO The file /swagger-ui-bundle.js was not modified
+2020-03-26 07:47:37.5133 INFO Request finished in 13.0439ms 304 text/css
+2020-03-26 07:47:37.5133 INFO Request starting HTTP/1.1 GET http://localhost:50350/swagger-ui-standalone-preset.js  
+2020-03-26 07:47:37.5309 INFO Request finished in 14.2471ms 304 application/javascript
+2020-03-26 07:47:37.5309 INFO The file /swagger-ui-standalone-preset.js was not modified
+2020-03-26 07:47:37.5309 INFO Request finished in 9.0649ms 304 application/javascript
+2020-03-26 07:47:37.8847 INFO Request starting HTTP/1.1 GET http://localhost:50350/swagger/v1/swagger.json  
+2020-03-26 07:47:38.0694 INFO Request finished in 183.5006ms 200 application/json;charset=utf-8
